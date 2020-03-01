@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                app:riv_corner_radius_top_left="8dp"
+                app:riv_corner_radius_top_right="8dp"
+                android:id="@+id/imv_pack"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_pack"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8_dp"
+                android:background="@drawable/bg_name_pack"
+                android:padding="@dimen/content_padding_16_dp"
+                android:text="MI"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imv_pack" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8_dp"
+                android:text="MIMAX70"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tv_code"
+                app:layout_constraintStart_toEndOf="@id/tv_code"
+                app:layout_constraintTop_toTopOf="@id/tv_code" />
+
+            <TextView
+                android:id="@+id/tv_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/content_padding_16_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_code"
+                tools:text="Giá cước: 70.000đ/tháng (Đã bao gồm VAT). Ưu đãi dành cho HS/SV/Cựu Sinh viên là 50.000đ (Trừ gói SV690, TSV2017)
+
+Ưu đãi:
+
++ 3GB lưu lượng tốc độ cao, sử dụng trong 30 ngày (đối với Thuê bao trả trước) hoặc hết tháng (đối với Thuê bao trả sau). Hết 3GB truy cập không giới hạn với tốc độ thông thường. Gói cước gia hạn khi hết chu kỳ. (Đối với thuê bao trả sau: Đăng ký gói từ ngày 21 đến cuối tháng sẽ giảm 50% phí gói và có 50% lưu lượng)
+
++ Tặng 3GB sử dụng ứng dụng ONME theo chu kỳ gói data, sau khi khách hàng đăng ký/gia hạn/khôi phục thành công (Hệ thống có nhắn tin thông báo khi cộng ưu đãi thành công và khi thuê bao sử dụng hết 3GB lưu lượng)." />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_32_dp"
+        android:background="@drawable/bg_button"
+        android:text="Đăng ký"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
